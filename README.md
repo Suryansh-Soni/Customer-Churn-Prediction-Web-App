@@ -47,6 +47,55 @@ Customer_Churn_Project/
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the repository
-```bash
-git clone <your-repo-link>
+``` bash
+[git clone <your-repo-link>
 cd Customer_Churn_Project
+](https://github.com/Suryansh-Soni/Customer-Churn-Prediction-Web-App.git)
+```
+
+## Install dependencies
+pip install flask pandas numpy scikit-learn
+
+## Run the application
+python app.py
+
+## Open in browser
+http://127.0.0.1:5000/
+
+## Model Details
+Algorithm: Random Forest Classifier
+Technique: SMOTE (for handling class imbalance)
+Input: Customer demographic and service details
+Output:
+Churn Prediction (Yes/No)
+Probability Score
+
+## Workflow
+Data Collection (Telco dataset)
+Data Cleaning & Preprocessing
+Exploratory Data Analysis (EDA)
+Feature Engineering
+Model Training (Random Forest + SMOTE)
+Model Evaluation
+Deployment using Flask
+
+## Use Case
+
+This project helps telecom companies to:
+
+Identify customers likely to churn
+Take preventive actions
+Improve customer retention
+Enhance business decision-making
+
+## Future Improvements
+📈 Add interactive dashboard
+🌍 Deploy on cloud (Render / AWS)
+📱 Improve mobile responsiveness
+🔄 Use ML pipeline for better scalability
+
+ ##Author
+
+Suryansh Soni
+
+⭐ If you like this project , Give it a star ⭐ on GitHub!
