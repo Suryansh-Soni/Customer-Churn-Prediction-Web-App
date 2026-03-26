@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Customer Churn Prediction</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container main-container">
+      <h1 class="title">Customer Churn Prediction</h1>
+
+      <form action="/" method="POST">
+        <div class="row">
+          <!-- LEFT SIDE -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Senior Citizen</label>
+              <input
+                type="number"
+                name="query1"
+                value="{{query1}}"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Monthly Charges</label>
+              <input
+                type="number"
+                step="any"
+                name="query2"
+                value="{{query2}}"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Total Charges</label>
+              <input
+                type="number"
+                step="any"
+                name="query3"
+                value="{{query3}}"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>Gender</label>
+              <select name="query4" class="form-control">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Partner</label>
+              <select name="query5" class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Dependents</label>
+              <select name="query6" class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Service</label>
+              <select name="query7" class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Multiple Lines</label>
+              <select name="query8" class="form-control">
+                <option>No</option>
+                <option>Yes</option>
+                <option>No phone service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Internet Service</label>
+              <select name="query9" class="form-control">
+                <option>DSL</option>
+                <option>Fiber optic</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Online Security</label>
+              <select name="query10" class="form-control">
+                <option>No</option>
+                <option>Yes</option>
+                <option>No internet service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Online Backup</label>
+              <select name="query11" class="form-control">
+                <option>No</option>
+                <option>Yes</option>
+                <option>No internet service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Device Protection</label>
+              <select name="query12" class="form-control">
+                <option>No</option>
+                <option>Yes</option>
+                <option>No internet service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Tech Support</label>
+              <select name="query13" class="form-control">
+                <option>No</option>
+                <option>Yes</option>
+                <option>No internet service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Streaming TV</label>
+              <select name="query14" class="form-control">
+                <option>No</option>
+                <option>Yes</option>
+                <option>No internet service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Streaming Movies</label>
+              <select name="query15" class="form-control">
+                <option>No</option>
+                <option>Yes</option>
+                <option>No internet service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Contract</label>
+              <select name="query16" class="form-control">
+                <option>Month-to-month</option>
+                <option>One year</option>
+                <option>Two year</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Paperless Billing</label>
+              <select name="query17" class="form-control">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Payment Method</label>
+              <select name="query18" class="form-control">
+                <option>Electronic check</option>
+                <option>Mailed check</option>
+                <option>Bank transfer (automatic)</option>
+                <option>Credit card (automatic)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Tenure</label>
+              <input
+                type="number"
+                name="query19"
+                value="{{query19}}"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary submit-btn">
+            Predict
+          </button>
+        </div>
+      </form>
+
+      {% if output1 %}
+      <div class="result-box">
+        <h3>{{output1}}</h3>
+        <p>{{output2}}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
